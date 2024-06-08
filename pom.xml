@@ -76,7 +76,7 @@
 				</executions>
 				<configuration>
 					<sources>
-						<source>${project.basedir}/src/main/resources/xsd/calcularMenor.xsd</source>
+						<source>${project.basedir}/src/main/resources/xsd/materia.xsd</source>
 					</sources>
 					<outputDirectory>src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>

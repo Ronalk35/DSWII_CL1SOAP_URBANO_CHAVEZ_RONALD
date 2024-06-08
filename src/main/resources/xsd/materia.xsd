@@ -1,0 +1,24 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+
+    <!-- Definición del elemento para la solicitud de matrícula -->
+    <xs:element name="MatriculaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numeroMaterias" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del elemento para la respuesta de la matrícula -->
+    <xs:element name="MatriculaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="costoTotal" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

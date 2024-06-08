@@ -41,6 +41,18 @@ public class WebServiceConfig {
         return wsdl11Definition;
     }
 
+    // Definición de la definición WSDL para la matrícula de los alumnos
+    @Bean(name = "matricula")
+    public DefaultWsdl11Definition matriculaWsdl11Definition(XsdSchema matriculaSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("MatriculaPort");
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
+        wsdl11Definition.setSchema(matriculaSchema);
+        return wsdl11Definition;
+    }
+
+
     @Bean
     public XsdSchema jubilarseSchema() {
         return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/jubilarse.xsd"));
@@ -49,5 +61,12 @@ public class WebServiceConfig {
     @Bean
     public XsdSchema calcularMenorSchema() {
         return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/calcularMenor.xsd"));
+    }
+
+
+    // Definición del esquema XSD para la matrícula de los alumnos
+    @Bean
+    public XsdSchema matriculaSchema() {
+        return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/materia.xsd"));
     }
 }
