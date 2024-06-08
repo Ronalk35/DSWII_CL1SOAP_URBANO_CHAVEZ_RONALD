@@ -65,6 +65,17 @@ public class WebServiceConfig {
         return wsdl11Definition;
     }
 
+    // Definición de la definición WSDL para calcularSuma
+    @Bean(name = "calcularSuma")
+    public DefaultWsdl11Definition calcularSumaWsdl11Definition(XsdSchema calcularSumaSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("CalcularSumaPort");
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
+        wsdl11Definition.setSchema(calcularSumaSchema);
+        return wsdl11Definition;
+    }
+
 
     @Bean
     public XsdSchema jubilarseSchema() {
@@ -89,5 +100,13 @@ public class WebServiceConfig {
     public XsdSchema salarioSchema() {
         return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/salario.xsd"));
     }
+
+
+    // Definición del esquema XSD para calcularSuma
+    @Bean
+    public XsdSchema calcularSumaSchema() {
+        return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/calcularSuma.xsd"));
+    }
+
 
 }

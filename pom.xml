@@ -76,7 +76,7 @@
 				</executions>
 				<configuration>
 					<sources>
-						<source>${project.basedir}/src/main/resources/xsd/salario.xsd</source>
+						<source>${project.basedir}/src/main/resources/xsd/calcularSuma.xsd</source>
 					</sources>
 					<outputDirectory>src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
