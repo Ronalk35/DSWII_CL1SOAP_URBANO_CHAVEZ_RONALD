@@ -31,8 +31,23 @@ public class WebServiceConfig {
         return wsdl11Definition;
     }
 
+    @Bean(name = "calcularMenor")
+    public DefaultWsdl11Definition calcularMenorWsdl11Definition(XsdSchema calcularMenorSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("CalcularMenorPort");
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
+        wsdl11Definition.setSchema(calcularMenorSchema);
+        return wsdl11Definition;
+    }
+
     @Bean
     public XsdSchema jubilarseSchema() {
         return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/jubilarse.xsd"));
+    }
+
+    @Bean
+    public XsdSchema calcularMenorSchema() {
+        return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/calcularMenor.xsd"));
     }
 }
