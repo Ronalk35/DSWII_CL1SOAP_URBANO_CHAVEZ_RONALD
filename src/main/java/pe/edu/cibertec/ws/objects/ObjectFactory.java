@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.08 a las 02:05:11 PM PET 
+// Generado el: 2024.06.08 a las 02:37:31 PM PET 
 //
 
 
@@ -37,19 +37,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link MatriculaRequest }
+     * Create an instance of {@link SalarioRequest }
      * 
      */
-    public MatriculaRequest createMatriculaRequest() {
-        return new MatriculaRequest();
+    public SalarioRequest createSalarioRequest() {
+        return new SalarioRequest();
     }
 
     /**
-     * Create an instance of {@link MatriculaResponse }
+     * Create an instance of {@link SalarioResponse }
      * 
      */
-    public MatriculaResponse createMatriculaResponse() {
-        return new MatriculaResponse();
+    public SalarioResponse createSalarioResponse() {
+        return new SalarioResponse();
     }
 
 }
