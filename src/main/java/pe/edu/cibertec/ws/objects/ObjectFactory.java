@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.08 a las 03:28:34 PM PET 
+// Generado el: 2024.06.08 a las 04:39:47 PM PET 
 //
 
 
@@ -37,19 +37,75 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SumaRequest }
+     * Create an instance of {@link CreateRequest }
      * 
      */
-    public SumaRequest createSumaRequest() {
-        return new SumaRequest();
+    public CreateRequest createCreateRequest() {
+        return new CreateRequest();
     }
 
     /**
-     * Create an instance of {@link SumaResponse }
+     * Create an instance of {@link UpdateRequest }
      * 
      */
-    public SumaResponse createSumaResponse() {
-        return new SumaResponse();
+    public UpdateRequest createUpdateRequest() {
+        return new UpdateRequest();
+    }
+
+    /**
+     * Create an instance of {@link SearchRequest }
+     * 
+     */
+    public SearchRequest createSearchRequest() {
+        return new SearchRequest();
+    }
+
+    /**
+     * Create an instance of {@link SearchByIdRequest }
+     * 
+     */
+    public SearchByIdRequest createSearchByIdRequest() {
+        return new SearchByIdRequest();
+    }
+
+    /**
+     * Create an instance of {@link CreateResponse }
+     * 
+     */
+    public CreateResponse createCreateResponse() {
+        return new CreateResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateResponse }
+     * 
+     */
+    public UpdateResponse createUpdateResponse() {
+        return new UpdateResponse();
+    }
+
+    /**
+     * Create an instance of {@link SearchResponse }
+     * 
+     */
+    public SearchResponse createSearchResponse() {
+        return new SearchResponse();
+    }
+
+    /**
+     * Create an instance of {@link ProgramaTvType }
+     * 
+     */
+    public ProgramaTvType createProgramaTvType() {
+        return new ProgramaTvType();
+    }
+
+    /**
+     * Create an instance of {@link SearchByIdResponse }
+     * 
+     */
+    public SearchByIdResponse createSearchByIdResponse() {
+        return new SearchByIdResponse();
     }
 
 }

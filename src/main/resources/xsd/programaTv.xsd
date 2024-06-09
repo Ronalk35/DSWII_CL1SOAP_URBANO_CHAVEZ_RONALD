@@ -1,0 +1,97 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+
+    <xs:element name="CreateRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elementos para crear un nuevo registro -->
+                <xs:element name="Titulo" type="xs:string"/>
+                <xs:element name="Resumen" type="xs:string"/>
+                <xs:element name="FechaInicio" type="xs:date"/>
+                <xs:element name="IdPersonaje" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="UpdateRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elementos para actualizar un registro existente -->
+                <xs:element name="IdProgramaTv" type="xs:int"/>
+                <xs:element name="Titulo" type="xs:string"/>
+                <xs:element name="Resumen" type="xs:string"/>
+                <xs:element name="FechaInicio" type="xs:date"/>
+                <xs:element name="IdPersonaje" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SearchRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elementos para buscar registros -->
+                <xs:element name="Titulo" type="xs:string" minOccurs="0"/>
+                <xs:element name="Resumen" type="xs:string" minOccurs="0"/>
+                <xs:element name="FechaInicioDesde" type="xs:date" minOccurs="0"/>
+                <xs:element name="FechaInicioHasta" type="xs:date" minOccurs="0"/>
+                <xs:element name="IdPersonaje" type="xs:int" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SearchByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elemento para buscar un registro por su ID -->
+                <xs:element name="IdProgramaTv" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Respuestas -->
+    <xs:element name="CreateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Success" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="UpdateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Success" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SearchResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ProgramaTv" type="tns:ProgramaTvType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SearchByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ProgramaTv" type="tns:ProgramaTvType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="ProgramaTvType">
+    <xs:sequence>
+        <xs:element name="IdProgramaTv" type="xs:int"/>
+        <xs:element name="Titulo" type="xs:string"/>
+        <xs:element name="Resumen" type="xs:string"/>
+        <xs:element name="FechaInicio" type="xs:date"/>
+        <xs:element name="IdPersonaje" type="xs:int"/>
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>

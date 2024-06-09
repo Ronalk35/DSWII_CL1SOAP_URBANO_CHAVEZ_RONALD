@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.06.08 a las 04:39:47 PM PET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.cibertec.edu.pe/ws/objects">
+    <schemaBindings map="false">
+      <package name="pe.edu.cibertec.ws.objects"/>
+    </schemaBindings>
+    <bindings scd="tns:CreateRequest">
+      <class ref="pe.edu.cibertec.ws.objects.CreateRequest"/>
+    </bindings>
+    <bindings scd="tns:UpdateRequest">
+      <class ref="pe.edu.cibertec.ws.objects.UpdateRequest"/>
+    </bindings>
+    <bindings scd="tns:SearchRequest">
+      <class ref="pe.edu.cibertec.ws.objects.SearchRequest"/>
+    </bindings>
+    <bindings scd="tns:SearchByIdRequest">
+      <class ref="pe.edu.cibertec.ws.objects.SearchByIdRequest"/>
+    </bindings>
+    <bindings scd="tns:CreateResponse">
+      <class ref="pe.edu.cibertec.ws.objects.CreateResponse"/>
+    </bindings>
+    <bindings scd="tns:UpdateResponse">
+      <class ref="pe.edu.cibertec.ws.objects.UpdateResponse"/>
+    </bindings>
+    <bindings scd="tns:SearchResponse">
+      <class ref="pe.edu.cibertec.ws.objects.SearchResponse"/>
+    </bindings>
+    <bindings scd="~tns:ProgramaTvType">
+      <class ref="pe.edu.cibertec.ws.objects.ProgramaTvType"/>
+    </bindings>
+    <bindings scd="tns:SearchByIdResponse">
+      <class ref="pe.edu.cibertec.ws.objects.SearchByIdResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

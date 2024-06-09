@@ -77,6 +77,19 @@ public class WebServiceConfig {
     }
 
 
+    // Definición de la definición WSDL para el nuevo servicio programaTv
+    @Bean(name = "programaTv")
+    public DefaultWsdl11Definition programaTvWsdl11Definition(XsdSchema programaTvSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("ProgramaTvPort");
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
+        wsdl11Definition.setSchema(programaTvSchema);
+        return wsdl11Definition;
+    }
+
+
+
     @Bean
     public XsdSchema jubilarseSchema() {
         return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/jubilarse.xsd"));
@@ -108,5 +121,11 @@ public class WebServiceConfig {
         return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/calcularSuma.xsd"));
     }
 
+
+    // Define el esquema XSD para el nuevo servicio programaTv
+    @Bean
+    public XsdSchema programaTvSchema() {
+        return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/programaTv.xsd"));
+    }
 
 }
